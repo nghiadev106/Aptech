@@ -1,0 +1,173 @@
+﻿@model Academy.Models.FeedBackViewModel
+@{
+    ViewBag.Title = "Tuyển sinh";
+    var lstCourses = (List<Academy.Models.CourseViewModel>)ViewBag.ListCourse;
+}
+<div class="content">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="col-sm-6">
+                    <div class="block-about-us-content">
+                        <div class="body_caunoi">
+                            <p style="text-align: center;">Hãy theo đuổi đam mê, thành công sẽ theo đuổi bạn</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-5"> <img src="~/Assets/pages/sites/all/themes/aptech_news_2/images/Gioi-thieu_slogan.jpg" /></div>
+            </div>
+            <div class="region region-content">
+                <section id="block-block-30" class="block block-block tuyen-sinh-desc clearfix">
+                    <div class="block-content">
+                        <h3>
+                            <p>1. Thủ tục đăng ký</p>
+                        </h3>
+                        <p><span style="font-size: medium;">Thí sinh cần hoàn thành thủ tục đăng ký thi trực tiếp tại Hệ thống Đào tạo Lập trình viên Quốc tế Aptech 5 ngày trước khi dự thi. Thí sinh liên hệ trước với Phòng Tuyển sinh &nbsp;để biết Lịch thi, nhận Tài liệu ôn thi và Phiếu báo thi. Hồ sơ dự thi gồm:</span></p>
+                        <h4>1.&nbsp;&nbsp;&nbsp;&nbsp;2 ảnh 4x6cm</h4>
+                        <h4>2.&nbsp;&nbsp;&nbsp;&nbsp;Lệ phí thi: 100.000VND</h4>
+                        <p><span style="font-size: medium;">Thí sinh đến dự thi phải mang theo Phiếu báo thi có dán ảnh cá nhân và đóng dấu của Aptech. Trước khi vào phòng thi, thí sinh phải tắt điện thoại di động và máy nhắn tin và không được phép mang từ điển hay các tài liệu liên quan khác vào phòng thi.</span></p>
+                        <h3>
+                            <p>2. Hình thức thi tuyển:&nbsp;</p>
+                        </h3>
+                        <p><span style="font-size: medium;">Thí sinh làm bài thi trong thời gian 90 phút ( trong đó Toán Logic 60 phút và tiếng Anh là 30 phút)</span></p>
+                        <p><span style="font-size: medium;">- Aptech tổ chức thi tuyển và khai giảng hàng tháng tại các cơ sở (285 Đội Cấn, 54 Lê Thanh Nghị, Bách Khoa, Hà Nội &amp; 212-214 Nguyễn Đình Chiểu, Hồ Chí Minh)</span></p>
+                        <h3>
+                            <p>3. Thông báo kết quả:</p>
+                        </h3>
+                        <p><span style="font-size: medium;">- Kết quả sẽ được thông báo tới thí sinh 1 ngày sau khi làm bài dự thi.&nbsp;</span></p>
+                        <h3>
+                            <p>4. Tài liệu tham khảo:</p>
+                        </h3>
+                        <p><span style="font-size: medium;">Thí sinh có thể<strong> download đề thi mẫu và đáp án</strong>:<strong>&nbsp;<a href="http://aptechvietnam.com.vn/sites/default/files/Gmat1_tiengViet_0.pdf" target="_blank">GMAT 1 - Đề &amp; kết quả (bản tiếng Việt)</a>, <a href="http://aptechvietnam.com.vn/sites/default/files/Gmat2_tiengViet_0.pdf" target="_blank">GMAT 2 - Tiếng Việt</a>,&nbsp;<a href="http://aptechvietnam.com.vn/sites/default/files/Gmat2_tiengViet_0.pdf" target="_blank">GMAT 1 (bản Tiếng Anh)</a>,&nbsp;<a href="http://aptechvietnam.com.vn/sites/default/files/GMAT1_Key.pdf" target="_blank">Kết quả GMAT 1 (bản Tiếng Anh)</a>,&nbsp;<a href="http://aptechvietnam.com.vn/sites/default/files/GMAT2_0.pdf" target="_blank">GMAT 2 (bản Tiếng Anh)</a>,&nbsp;<a href="http://aptechvietnam.com.vn/sites/default/files/GMAT2_Key.pdf" target="_blank">Kết quả GMAT 2 (bản Tiếng Anh)</a>,&nbsp;<a href="http://aptechvietnam.com.vn/sites/default/files/English.pdf" target="_blank">Đề Tiếng Anh</a>,&nbsp;<a href="http://aptechvietnam.com.vn/sites/default/files/English_Key.pdf" target="_blank">Kết quả Tiếng Anh</a></strong></span></p>
+                    </div>
+                </section>
+                <section id="block-system-main" class="block block-system clearfix">
+                    <div class="block-content">
+                        <div class="view view-tuy-n-sinh view-id-tuy_n_sinh view-display-id-page view-dom-id-02283d66ba2f5accae9b3f26b2b2c06a">
+                            <div class="view-footer">
+                                <div class="view view-tuy-n-sinh view-id-tuy_n_sinh view-display-id-page_1 view-dom-id-976b3122d6a2cfb6da91e02516f4aaa1">
+                                    <div class="view-header">
+                                        <h2 class="block-title">Lịch tuyển sinh</h2>
+                                    </div>
+                                    <div class="view-content">
+                                        @foreach (var item in lstCourses)
+                                        {
+                                            <div class="views-row views-row-1 views-row-odd views-row-first">
+                                                <div class="panel panel-default">
+                                                    <div class="panel-heading" role="tab" id="heading-6614">
+                                                        <h4 class="panel-title"> <a class="collapsed" role="button" data-toggle="collapse" data-parent=".view-content" href="#collapse-6614" aria-expanded="false" aria-controls="collapse-6614">Khóa học: @item.Name</a></h4>
+                                                    </div>
+                                                    <div id="collapse-6614" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading-6614">
+                                                        <div class="panel-body">
+                                                            <div class="row">
+                                                                <div class="col-sm-12 content">
+                                                                    <div class="item"> <span class="label">Khóa học: @item.Name</span></div><br />
+                                                                    <div class="item"> <span class="label">Ngày khai giảng: @String.Format("{0:dd/MM/yyyy}", item.StartDate)</span></div><br />
+                                                                    <div class="item"> <span class="label">Học phí: @String.Format("{0:#,##0}", item.Price) đ</span></div>
+                                                                    <div class="item">
+                                                                        <span class="label">Nội dung:</span>
+                                                                        <span class="content">
+                                                                            <p style="box-sizing: border-box; margin-top: 0px; margin-bottom: 10px; font-family: lato, &quot;Open Sans&quot;, sans-serif; font-size: 14px;">Kỳ thi Tuyển sinh Aptech @String.Format("{0:dd/MM/yyyy}", item.StartDate) được tổ chức tại TP.HN và các tỉnh miền Bắc.</p>
+                                                                            <p style="box-sizing: border-box; margin-top: 0px; margin-bottom: 10px; font-family: lato, &quot;Open Sans&quot;, sans-serif; font-size: 14px;">Thí sinh đăng ký thi tuyển, liên hệ Hotline 1800 1141 (miễn phí), hoặc để lại tin nhắn để được hướng dẫn đăng ký.</p>
+                                                                            <p style="box-sizing: border-box; margin-top: 0px; margin-bottom: 0px; font-family: lato, &quot;Open Sans&quot;, sans-serif; font-size: 14px;">Xem thêm thông tin khoá học Aptech tại:&nbsp;<a href="https://aptechvietnam.com.vn/tuyensinhCNTT/" style="box-sizing: border-box; background: transparent; color: #428bca; outline: none; transition: all 0.3s ease 0s;">https://aptechvietnam.com.vn/tuyensinhCNTT/</a></p>
+                                                                        </span>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        }
+                                        </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="highlighted">
+    <div class="region region-highlighted">      
+        <section id="block-block-10" class="block block-block loi_ich clearfix">
+            <div class="container">
+                <h2 class="block-title">LỢI ÍCH VƯỢT TRỘI KHÓA LẬP TRÌNH VIÊN QUỐC TẾ</h2>
+                <h3>TẠI ĐƠN VỊ ĐÀO TẠO CNTT SỐ 1 VIỆT NAM</h3>
+                <div class="row">
+                    <div class="col-sm-3">
+                        <div class="image_loi_ich"> <img src="~/Assets/pages/sites/all/themes/aptech_news_2/images/loi_ich1.png" /></div>
+                        <div class="title"> Chương trình đào tạo<br /> <span>theo chuẩn quốc tế</span></div>
+                        <div class="des"> Giúp sinh viên có cơ hội tiếp thu, học hỏi lượng kiến thức chất lượng về công nghệ được công nhận tại nhiều quốc gia trên thế giới.</div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="image_loi_ich"> <img src="~/Assets/pages/sites/all/themes/aptech_news_2/images/loi_ich2.png" /></div>
+                        <div class="title"> Thời gian đào tạo ngắn<br /> <span>Chỉ trong 2,5 năm</span></div>
+                        <div class="des"> Với thời lượng đào tạo được tối giản chỉ tập trung vào các môn chuyên ngành, sinh viên Aptech sau 2,5 năm học tập đã có thể đi làm ngay.</div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="image_loi_ich"> <img src="~/Assets/pages/sites/all/themes/aptech_news_2/images/loi_ich3.png" /></div>
+                        <div class="title"> Chương trình Liên thông<br /> <span>Đại học Quốc tế</span></div>
+                        <div class="des"> Ngoài môi trường giảng dạy quốc tế, chúng tôi còn giúp bạn Liên thông lên các trường ĐH Quốc tế như RMIT, AUT, BROOKES...</div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="image_loi_ich"> <img src="~/Assets/pages/sites/all/themes/aptech_news_2/images/loi_ich4.png" /></div>
+                        <div class="title"> Sinh viên ra trường<br /> <span>95% có việc làm ngay</span></div>
+                        <div class="des"> Aptech thường xuyên liên kết với các doanh nghiệp về Công nghệ Thông tin, cam kết sinh viên ra trường sẽ có việc làm, nơi thực tập phù hợp.</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="block-block-11" class="block block-block button clearfix">
+            <div class="container">
+                <h2 class="block-title">Bạn có muốn học cùng chuyên gia CNTT hàng đầu?</h2>
+                <div class="row">
+                    <div class="col-sm-12"><a href="#block-webform-client-block-5352" class="button_i_want">Tôi muốn</a></div>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>
+
+<div class="front_content_2">
+    <div class="region region-front-content-2">
+        <section id="block-webform-client-block-5352" class="block block-webform form_register col-sm-12 clearfix">
+            <div class="container">
+                <h2 class="block-title">ĐĂNG KÝ NHẬN TƯ VẤN TỪ APTECH</h2>
+                <h3>Bạn vui lòng điền đầy đủ thông tin và click đăng ký. APTECH sẽ liên lạc với bạn trong thời gian sớm nhất</h3>
+                <div class="row">
+                    <div id="webform-ajax-wrapper-5352">
+                        <form class="webform-client-form webform-client-form-5352" action="/Home/FeedBack" method="post" id="webform-client-form-5352" accept-charset="UTF-8">
+                            <div>
+                                <div class="form-item webform-component webform-component-textfield webform-component--name"> <label for="edit-submitted-name">Họ và tên <span class="form-required" title="This field is required.">*</span></label>@Html.TextBoxFor(model => model.Name, new { @required = "required", @class = "form-control form-text required", @type = "text", id = "edit-submitted-name", size = "60", maxlength = "128" })</div>
+                                <div class="form-item webform-component webform-component-email webform-component--e-mail"> <label for="edit-submitted-e-mail">E-mail <span class="form-required" title="This field is required.">*</span></label> @Html.TextBoxFor(model => model.Email, new { @required = "required", @class = "form-control form-text required", @type = "text", id = "edit-submitted-email", size = "60", maxlength = "128" })</div>
+                                <div class="form-item webform-component webform-component-textfield webform-component--phone"> <label for="edit-submitted-phone">Điện thoại <span class="form-required" title="This field is required.">*</span></label> @Html.TextBoxFor(model => model.Phone, new { @required = "required", @class = "form-control form-text required", @type = "number", id = "edit-submitted-email", size = "60", maxlength = "128" })</div>
+                                <div class="form-item webform-component webform-component-radios webform-component--location">
+                                    <label for="edit-submitted-location">Vị trí <span class="form-required" title="This field is required.">*</span></label>
+                                    <div id="edit-submitted-location" class="form-radios">
+                                        <div class="form-type-radio form-item-submitted-location form-item radio"> <input required="required" type="radio" id="edit-submitted-location-1" name="submitted[location]" value="1" class="form-radio" /> <label for="edit-submitted-location-1">54 Lê Thanh Nghị, Bách Khoa, Hà Nội </label></div>
+                                        <div class="form-type-radio form-item-submitted-location form-item radio"> <input required="required" type="radio" id="edit-submitted-location-2" name="submitted[location]" value="2" class="form-radio" /> <label for="edit-submitted-location-2">285 Đội Cấn, Ba Đình, Hà Nội </label></div>
+                                        <div class="form-type-radio form-item-submitted-location form-item radio"> <input required="required" type="radio" id="edit-submitted-location-3" name="submitted[location]" value="3" class="form-radio" /> <label for="edit-submitted-location-3">212-214 Nguyễn Đình Chiểu, Q.3, TPHCM </label></div>
+                                    </div>
+                                </div>
+                                <fieldset class="captcha panel panel-default form-wrapper">
+
+                                    <div class="panel-body">
+                                        <div class="form-type-textfield form-item-captcha-response form-item form-group" data-toggle="tooltip" title="Fill in the blank."> <label for="edit-captcha-response">Nhập thông tin cần tư vấn<span class="form-required" title="This field is required.">*</span></label> @Html.TextBoxFor(model => model.Description, new { @class = "form-control form-text", @type = "text", id = "edit-submitted-desc", size = "50", maxlength = "500" })</div>
+                                    </div>
+                                </fieldset>
+                                <button class="webform-submit button-primary btn btn-primary form-submit" value="Submit" type="submit">Submit</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+</div>
+
+
